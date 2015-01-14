@@ -31,6 +31,7 @@ def dist(v1,v2):
       d = d+(v1[x]-v2[x])*(v1[x]-v2[x]) 
     return d
 
+#set of images to compare with the testimage
 full_file_paths = get_filepaths("./photos/training")
 print 'number of training examples:', len(full_file_paths)
 
