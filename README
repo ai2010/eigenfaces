@@ -1,12 +1,12 @@
 Using a PCA algorithm to detect a specific person (test image.jpg) from a pool of faces (in training folder).
 The algorithm is described in ‘Eigenfaces for Recognition’ by M. Turk and A. Pentland and it can be summarized as follows:
 
--calculate the average image $$Av=\Sum_{i=0}^{M}P_i$$ where P is the photo $i$, M is the number of images
--calculate the difference with the P-Av
--calculate the eingenvectors evecs of the transpose covariance matrix L_{ij}=P_i^T P_j
--determine the eigenvectors of the covariance matrix C=L^T u_l =
--project the images to the reduced space
--project the test image to reduced space ured
--calculate the distance of the reduced vector ured with the images
+-calculate the average image $$Av=\Sum_{i=0}^{M}P_i$$ where $P_i$ is the photo $i$, $M$ is the number of images
+-calculate the difference with the $D_i=P_i-Av$ $i\in 1,…M$
+-calculate the eingenvectors $v_l$ of the transpose covariance matrix $L_{ij}=P_i^T P_j$
+-determine the eigenvectors of the covariance matrix $C=L^T,\; u_l =\Sum_{i=0}^{M} v_{li}D_i$
+-project the images to the reduced space ($l$ refers to the image and $k$ to the component) $imred_{lk} = u_k^T D_l$ $l,k\in 1,…M$
+-project the test image to reduced space (Ptest refers to the test image $k$ index refers to the component) $ured_k = u_k^T ( Ptest-Av)$
+-calculate the distance of the reduced vector ured with the images $||ured-imred_i||$ $i\in 1,..M$
 -the minimum distance corresponds to the identified person  
 
