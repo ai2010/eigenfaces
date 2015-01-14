@@ -1,0 +1,12 @@
+Using a PCA algorithm to detect a specific person (test image.jpg) from a pool of faces (in training folder).
+The algorithm is described in ‘Eigenfaces for Recognition’ by M. Turk and A. Pentland and it can be summarized as follows:
+
+-calculate the average image Av= where P is the photo $i$, M is the number of images
+-calculate the difference with the P-Av
+-calculate the eingenvectors evecs of the transpose covariance matrix L_{ij}=P_i^T P_j
+-determine the eigenvectors of the covariance matrix C=L^T u_l =
+-project the images to the reduced space
+-project the test image to reduced space ured
+-calculate the distance of the reduced vector ured with the images
+-the minimum distance corresponds to the identified person  
+
