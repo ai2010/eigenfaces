@@ -23,6 +23,9 @@ def get_filepaths(directory):
 
 
 def dist(v1,v2):
+    '''
+    calculate the distance between 2 vectors
+    '''
     d=0
     for x in range(len(v1)):
       d = d+(v1[x]-v2[x])*(v1[x]-v2[x]) 
