@@ -157,12 +157,12 @@ class CheckImage():
           return d    
           
 
-
-folder = "../photos/training"
+#pool images
+folder = "./photos/training"
 
 #test image here:
-FILENAME='../testimage.jpg' #image can be in gif jpeg or png format
-
+FILENAME='testimage.jpg' #image can be in gif jpeg or png format
+#run script
 test = CheckImage(FILENAME,folder)
 test.DeterminePoolImage()
 
